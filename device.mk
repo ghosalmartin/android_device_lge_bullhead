@@ -385,7 +385,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Update 1x signal strength after 10s
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
-    persist.radio.snapshot_timer=10
+    persist.radio.snapshot_timer=10 \
+    persist.camera.shutter.disable=1
 
 # If data_no_toggle is 0 there are no reports if the screen is off.
 # If data_no_toggle is 1 then dormancy indications will come with screen off.
