@@ -376,6 +376,7 @@ service qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root
+    disabled
 
 service msm_irqbalance /system/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     socket msm_irqbalance seqpacket 660 root system
@@ -388,6 +389,7 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
+    disabled
 
 service charger /charger
     class charger
@@ -399,6 +401,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
+    LD_LIBRARY_PATH /vendor/lib:/system/lib
 
 on property:persist.radio.atfwd.start=false
     stop atfwd
