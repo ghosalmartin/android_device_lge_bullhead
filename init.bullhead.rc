@@ -401,7 +401,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
-    LD_LIBRARY_PATH /vendor/lib:/system/lib
+    setenv LD_LIBRARY_PATH /vendor/lib:/system/lib
 
 on property:persist.radio.atfwd.start=false
     stop atfwd
