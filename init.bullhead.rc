@@ -393,13 +393,13 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     writepid /dev/cpuset/system-background/tasks
     setenv LD_LIBRARY_PATH /vendor/lib:/system/lib
 
-on property:persist.radio.atfwd.start=false
-    stop atfwd
+#on property:persist.radio.atfwd.start=false
+#    stop atfwd
 
-service atfwd /system/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
+#service atfwd /system/bin/ATFWD-daemon
+#    class late_start
+#    user system
+#    group system radio
 
 on property:ro.debuggable=1
     start ss_ramdump
