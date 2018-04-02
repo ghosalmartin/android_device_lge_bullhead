@@ -411,7 +411,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.enable_timeout_ms=12000
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.bt.bdaddr_path=/persist/bdaddr.txt
+    ro.bt.bdaddr_path=/persist/bdaddr.txt \
+    persist.camera.shutter.disable=1 \
+    camera.fifo.disable=1
 
 # limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \
