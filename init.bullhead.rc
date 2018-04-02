@@ -184,8 +184,8 @@ on post-fs
     mkdir /persist/data/app_g 0700 system system
     mkdir /persist/widevine 0770 drm system
 
-    start qseecomd
-    exec - root root system -- /system/bin/init.bullhead.qseecomd.sh
+    #start qseecomd
+    #exec - root root system -- /system/bin/init.bullhead.qseecomd.sh
 
 on post-fs-data
     # Mark the copy complete flag to not completed
@@ -362,11 +362,11 @@ service loc_launcher /system/bin/loc_launcher
 service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
 
-service qseecomd /vendor/bin/qseecomd
-    class core
-    user root
-    group root
-    disabled
+#service qseecomd /vendor/bin/qseecomd
+#    class core
+#    user root
+#    group root
+#    disabled
 
 service msm_irqbalance /system/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     socket msm_irqbalance seqpacket 660 root system
